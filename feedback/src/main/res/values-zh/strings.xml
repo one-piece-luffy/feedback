@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="feedback_rate_title">喜欢我们的应用吗？</string>
+	<string name="feedback_rate_desc">如果您感觉好用，可以给我们5星好评吗？</string>
+	<string name="feedback_rate">评星</string>
+	<string name="feedback_fb_des">您的反馈将帮助我们做的更好。</string>
+	<string name="feedback_fb_hint">在此输入您的建议或意见</string>
+	<string name="feedback_fb_submit">提交</string>
+	<string name="feedback_rate_start_5">在Google Play上评星</string>
+	<string name="feedback_fb_success">感谢您的反馈</string>
+	<string name="feedback_comment_yes">是</string>
+	<string name="feedback_comment_no">否</string>
+	<string name="feedback_rate_star">我们会继续努力，给大家更好的产品体验。</string>
+	<string name="feedback_rate_star_title">不要啊!</string>
+	<string name="feedback_rate_star_title_4">谢谢!</string>
+</resources>

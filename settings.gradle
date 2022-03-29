@@ -1,0 +1,4 @@
+include ':app'
+include ':feedback'
+
+rootProject.name = "feedbackDemo"

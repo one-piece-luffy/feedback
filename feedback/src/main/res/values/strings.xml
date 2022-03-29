@@ -1,0 +1,15 @@
+<resources>
+    <string name="feedback_rate_title">Do you like our app?</string>
+    <string name="feedback_rate_desc">Please kindly give us 5 Stars rating.We will keep up the hard-working</string>
+    <string name="feedback_rate">Rate</string>
+    <string name="feedback_fb_des">Feedback will help us improve our works</string>
+    <string name="feedback_fb_hint">Your feedback please</string>
+    <string name="feedback_fb_submit">Submit</string>
+    <string name="feedback_rate_start_5">Rate On Google Play</string>
+    <string name="feedback_fb_success">Thanks for your feedback.</string>
+    <string name="feedback_comment_yes">Yes</string>
+    <string name="feedback_comment_no">No</string>
+    <string name="feedback_rate_star">We’ll work hard to make it better.</string>
+    <string name="feedback_rate_star_title">Oops!</string>
+    <string name="feedback_rate_star_title_4">Thank you!</string>
+</resources>
