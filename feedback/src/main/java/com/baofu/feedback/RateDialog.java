@@ -48,6 +48,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
     TextView submit;
     boolean showRate;
     String feedbackUrl;
+    public String extraMsg;
 
     private RateDialogListener mListener;
 
@@ -216,6 +217,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
             params.put("version", FeedbackUtils.getAppVersionName(getContext()));
             params.put("versioncode", FeedbackUtils.getAppVersionCode(getContext()) + "");
             params.put("device", FeedbackUtils.getDeviceInfo(getContext()));
+            params.put("extra_msg", extraMsg);
             BPRequest.getInstance()
                     .setMethod(BPRequest.Method.POST)
 //                    .setUrl("http://192.168.0.101:3000/feedback")
