@@ -46,6 +46,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
     ImageView closeFb;
     EditText editText;
     TextView submit;
+    TextView descFb;
     boolean showRate;
     String feedbackUrl;
     public String extraMsg;
@@ -73,6 +74,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
         desc = findViewById(R.id.desc);
         title = findViewById(R.id.title);
         icon = findViewById(R.id.icon);
+        descFb = findViewById(R.id.descFb);
 
         layoutStar = findViewById(R.id.layoutStar);
         layoutFeedBack = findViewById(R.id.layoutFeedBack);
@@ -267,5 +269,16 @@ public class RateDialog extends Dialog implements View.OnClickListener {
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.width = getContext().getResources().getDisplayMetrics().widthPixels * 80 / 100;
         getWindow().setAttributes(params);
+    }
+
+    public void setFeedbackHint(String hint){
+        if(editText!=null){
+            editText.setHint(hint);
+        }
+    }
+    public void setFeedbackTitle(String title){
+        if(descFb!=null){
+            descFb.setText(title);
+        }
     }
 }
