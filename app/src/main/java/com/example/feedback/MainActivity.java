@@ -55,5 +55,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         rateDialog.show();
+//        rateDialog.setFeedbackHint("haha");
+//        rateDialog.setFeedbackTitle("hello");
     }
 }

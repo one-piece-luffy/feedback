@@ -46,6 +46,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
     ImageView closeFb;
     EditText editText;
     TextView submit;
+    TextView descFb;
     boolean showRate;
     String feedbackUrl;
     public String extraMsg;
@@ -73,6 +74,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
         desc = findViewById(R.id.desc);
         title = findViewById(R.id.title);
         icon = findViewById(R.id.icon);
+        descFb = findViewById(R.id.descFb);
 
         layoutStar = findViewById(R.id.layoutStar);
         layoutFeedBack = findViewById(R.id.layoutFeedBack);
@@ -110,7 +112,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                         desc.setText(getContext().getString(R.string.feedback_rate_star));
                         title.setText(getContext().getString(R.string.feedback_rate_star_title));
 //                        icon.setImageResource(R.drawable.rate_dialog_icon_star_1);
-                        icon.setImageResource(R.drawable.feedback_ic_insaver_emoji_rate_1);
+                        icon.setImageResource(R.drawable.feedback_star_1);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate));
                         mTvRate.setEnabled(true);
                         break;
@@ -119,7 +121,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                         desc.setText(getContext().getString(R.string.feedback_rate_star));
                         title.setText(getContext().getString(R.string.feedback_rate_star_title));
 //                        icon.setImageResource(R.drawable.rate_dialog_icon_star_2);
-                        icon.setImageResource(R.drawable.feedback_ic_insaver_emoji_rate_2);
+                        icon.setImageResource(R.drawable.feedback_star_2);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate));
                         mTvRate.setEnabled(true);
                         break;
@@ -128,7 +130,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                         desc.setText(getContext().getString(R.string.feedback_rate_star));
                         title.setText(getContext().getString(R.string.feedback_rate_star_title));
 //                        icon.setImageResource(R.drawable.rate_dialog_icon_star_3);
-                        icon.setImageResource(R.drawable.feedback_ic_insaver_emoji_rate_3);
+                        icon.setImageResource(R.drawable.feedback_star_3);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate));
                         mTvRate.setEnabled(true);
                         break;
@@ -137,7 +139,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                         desc.setText(getContext().getString(R.string.feedback_rate_star));
                         title.setText(getContext().getString(R.string.feedback_rate_star_title_4));
 //                        icon.setImageResource(R.drawable.rate_dialog_icon_star_4);
-                        icon.setImageResource(R.drawable.feedback_ic_insaver_emoji_rate_4);
+                        icon.setImageResource(R.drawable.feedback_star_4);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate));
                         mTvRate.setEnabled(true);
                         break;
@@ -269,5 +271,16 @@ public class RateDialog extends Dialog implements View.OnClickListener {
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.width = getContext().getResources().getDisplayMetrics().widthPixels * 80 / 100;
         getWindow().setAttributes(params);
+    }
+
+    public void setFeedbackHint(String hint){
+        if(editText!=null){
+            editText.setHint(hint);
+        }
+    }
+    public void setFeedbackTitle(String title){
+        if(descFb!=null){
+            descFb.setText(title);
+        }
     }
 }
