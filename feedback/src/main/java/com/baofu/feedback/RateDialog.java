@@ -222,6 +222,8 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                     .setMethod(BPRequest.Method.POST)
 //                    .setUrl("http://192.168.0.101:3000/feedback")
                     .setUrl(feedbackUrl)
+                    .encryptionUrl(true)
+                    .encryptionDiff(-3)
                     .setParams(params)
                     .setHeader(header)
                     .setOnResponseString(new BPListener.OnResponseString() {
