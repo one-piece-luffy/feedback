@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/64679/Documents/GitHub/feedback/feedback/src/main/res/drawable/feedback_bg_fb_btn.xml" value="0.124" />
+        <entry key="..\:/Users/64679/Documents/GitHub/feedback/feedback/src/main/res/drawable/feedback_bg_fb_edit_text.xml" value="0.124" />
+        <entry key="..\:/Users/64679/Documents/GitHub/feedback/feedback/src/main/res/drawable/feedback_shape_rate_btn.xml" value="0.124" />
+        <entry key="..\:/Users/64679/Documents/GitHub/feedback/feedback/src/main/res/drawable/feedback_shape_rate_btn_normal.xml" value="0.124" />
+        <entry key="..\:/Users/64679/Documents/GitHub/feedback/feedback/src/main/res/layout/feedback_dialog_rate.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

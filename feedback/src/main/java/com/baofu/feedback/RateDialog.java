@@ -43,7 +43,6 @@ public class RateDialog extends Dialog implements View.OnClickListener {
      */
     int score = 0;
 
-    ImageView closeFb;
     EditText editText;
     TextView submit;
     TextView descFb;
@@ -78,13 +77,11 @@ public class RateDialog extends Dialog implements View.OnClickListener {
 
         layoutStar = findViewById(R.id.layoutStar);
         layoutFeedBack = findViewById(R.id.layoutFeedBack);
-        closeFb = findViewById(R.id.closeFb);
         editText = findViewById(R.id.editText);
         submit = findViewById(R.id.submit);
 
         mClose.setOnClickListener(this);
         mTvRate.setOnClickListener(this);
-        closeFb.setOnClickListener(this);
         submit.setOnClickListener(this);
 
         if (showRate) {
@@ -182,9 +179,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         int i = v.getId();
-        if (i == R.id.close || i == R.id.closeFb) {
-            cancel();
-        } else if (i == R.id.tv_rate) {
+        if (i == R.id.tv_rate) {
             // 5颗星直接评价，其它都需要反馈
             if (score == 5) {
                 Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=" + activity.getApplicationInfo().packageName);
