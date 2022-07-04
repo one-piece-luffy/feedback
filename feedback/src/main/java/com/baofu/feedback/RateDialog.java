@@ -240,7 +240,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
             Toast.makeText(activity, activity.getString(R.string.feedback_fb_success), Toast.LENGTH_SHORT).show();
             FeedbackSharePreference.savePraise(activity, true);
             if (mListener != null) {
-                mListener.onFeedback();
+                mListener.onFeedback(editText.getText().toString().trim());
             }
             cancel();
         }
@@ -249,7 +249,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
     public interface RateDialogListener {
         void onRate();
 
-        void onFeedback();
+        void onFeedback(String message);
 
         void onCancel();
     }

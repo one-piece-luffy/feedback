@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFeedback() {
+            public void onFeedback(String message) {
             }
 
             @Override
