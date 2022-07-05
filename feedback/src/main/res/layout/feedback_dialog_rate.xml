@@ -66,7 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="27dp"
+                android:layout_marginTop="22dp"
                 app:halfstart="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -74,8 +74,8 @@
                 app:starCount="5"
                 app:starEmpty="@drawable/feedback_star_nor"
                 app:starFill="@drawable/feedback_star_sel"
-                app:starImageHeight="54dp"
-                app:starImagePadding="6dp"
+                app:starImageHeight="45dp"
+                app:starImagePadding="16dp"
                 app:starImageWidth="45dp" />
 
             <TextView
