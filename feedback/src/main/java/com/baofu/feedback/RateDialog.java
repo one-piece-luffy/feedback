@@ -47,18 +47,19 @@ public class RateDialog extends Dialog implements View.OnClickListener {
     TextView submit;
     TextView descFb;
     boolean showRate;
-    String feedbackUrl;
+    public String feedbackUrl;
+    public String feedbackPath;
     public String extraMsg;
 
     private RateDialogListener mListener;
 
-    public RateDialog(Activity activity, String feedbackUrl, boolean showRate, RateDialogListener listener) {
+    public RateDialog(Activity activity, boolean showRate, RateDialogListener listener) {
         super(activity, R.style.FeedbackDialogStyle);
         this.mListener = listener;
         this.activity = activity;
         this.showRate = showRate;
-        this.feedbackUrl = feedbackUrl;
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -221,6 +222,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                     .setUrl(feedbackUrl)
                     .encryptionUrl(true)
                     .encryptionDiff(-3)
+                    .appenEncryptPath(feedbackPath)
                     .setParams(params)
                     .setHeader(header)
                     .setOnResponseString(new BPListener.OnResponseString() {

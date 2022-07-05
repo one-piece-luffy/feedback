@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .build();
         BPRequest.getInstance().init(config);
-        RateDialog rateDialog = new RateDialog(MainActivity.this,"dKU3fGryO}H8Pl7{QmjxPF7{PGL9P}DzPF<p]ZYn\\pImdz@@",true, new RateDialog.RateDialogListener() {
+        RateDialog rateDialog = new RateDialog(MainActivity.this,true, new RateDialog.RateDialogListener() {
             @Override
             public void onRate() {
             }
@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         rateDialog.show();
+        rateDialog.feedbackUrl="url";
+        rateDialog.feedbackPath="path";
 //        rateDialog.setFeedbackHint("haha");
 //        rateDialog.setFeedbackTitle("hello");
     }
