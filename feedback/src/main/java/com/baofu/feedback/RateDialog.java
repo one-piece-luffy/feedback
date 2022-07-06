@@ -146,7 +146,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                         break;
                     }
                     case 5: {
-                        desc.setText(getContext().getString(R.string.feedback_rate_star));
+                        desc.setText(R.string.rate5_desc);
                         title.setText(getContext().getString(R.string.feedback_rate_star_title_4));
                         icon.setImageResource(R.drawable.rate5);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate_start_5));

@@ -10,9 +10,10 @@
 	<string name="feedback_fb_success">感谢您的反馈</string>
 	<string name="feedback_comment_yes">是</string>
 	<string name="feedback_comment_no">否</string>
-	<string name="feedback_rate_star">我们会继续努力，给大家更好的产品体验。</string>
+	<string name="feedback_rate_star">我们会继续努力。</string>
 	<string name="feedback_rate_star_title">不要啊!</string>
 	<string name="feedback_rate_star_title_4">谢谢!</string>
 	<string name="feedback">反馈</string>
 	<string name="cancel">取消</string>
+	<string name="rate5_desc">我们也喜欢你</string>
 </resources>
