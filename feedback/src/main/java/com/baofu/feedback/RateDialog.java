@@ -104,7 +104,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                     case 0: {
                         desc.setText(getContext().getString(R.string.feedback_rate_desc));
                         title.setText(getContext().getString(R.string.feedback_rate_title));
-                        icon.setImageResource(R.drawable.feedback_star_5);
+                        icon.setImageResource(R.drawable.rate5);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate));
                         mTvRate.setEnabled(false);
                         break;
@@ -113,7 +113,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                         desc.setText(getContext().getString(R.string.feedback_rate_star));
                         title.setText(getContext().getString(R.string.feedback_rate_star_title));
 //                        icon.setImageResource(R.drawable.rate_dialog_icon_star_1);
-                        icon.setImageResource(R.drawable.feedback_ic_insaver_emoji_rate_1);
+                        icon.setImageResource(R.drawable.rate1);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate));
                         mTvRate.setEnabled(true);
                         break;
@@ -122,7 +122,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                         desc.setText(getContext().getString(R.string.feedback_rate_star));
                         title.setText(getContext().getString(R.string.feedback_rate_star_title));
 //                        icon.setImageResource(R.drawable.rate_dialog_icon_star_2);
-                        icon.setImageResource(R.drawable.feedback_ic_insaver_emoji_rate_2);
+                        icon.setImageResource(R.drawable.rate2);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate));
                         mTvRate.setEnabled(true);
                         break;
@@ -131,7 +131,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                         desc.setText(getContext().getString(R.string.feedback_rate_star));
                         title.setText(getContext().getString(R.string.feedback_rate_star_title));
 //                        icon.setImageResource(R.drawable.rate_dialog_icon_star_3);
-                        icon.setImageResource(R.drawable.feedback_ic_insaver_emoji_rate_3);
+                        icon.setImageResource(R.drawable.rate3);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate));
                         mTvRate.setEnabled(true);
                         break;
@@ -140,7 +140,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                         desc.setText(getContext().getString(R.string.feedback_rate_star));
                         title.setText(getContext().getString(R.string.feedback_rate_star_title_4));
 //                        icon.setImageResource(R.drawable.rate_dialog_icon_star_4);
-                        icon.setImageResource(R.drawable.feedback_ic_insaver_emoji_rate_4);
+                        icon.setImageResource(R.drawable.rate4);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate));
                         mTvRate.setEnabled(true);
                         break;
@@ -148,7 +148,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                     case 5: {
                         desc.setText(getContext().getString(R.string.feedback_rate_star));
                         title.setText(getContext().getString(R.string.feedback_rate_star_title_4));
-                        icon.setImageResource(R.drawable.feedback_star_5);
+                        icon.setImageResource(R.drawable.rate5);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate_start_5));
                         mTvRate.setEnabled(true);
                         break;
