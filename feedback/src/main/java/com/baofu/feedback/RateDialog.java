@@ -250,6 +250,8 @@ public class RateDialog extends Dialog implements View.OnClickListener {
             cancel();
         }else if(i == R.id.cancel){
             cancel();
+        }else if(i == R.id.close){
+            cancel();
         }
     }
 
