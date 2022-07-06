@@ -34,6 +34,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
     ConstraintLayout layoutStar, layoutFeedBack;
     ImageView mClose;
     TextView mTvRate;
+    TextView mCancel;
     Activity activity;
     TextView desc, title;
     ImageView icon;
@@ -69,6 +70,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
         setCanceledOnTouchOutside(false);
 
         mClose = findViewById(R.id.close);
+        mCancel = findViewById(R.id.cancel);
         mTvRate = findViewById(R.id.tv_rate);
         ratingBar = findViewById(R.id.ratingBar);
         desc = findViewById(R.id.desc);
@@ -84,6 +86,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
         mClose.setOnClickListener(this);
         mTvRate.setOnClickListener(this);
         submit.setOnClickListener(this);
+        mCancel.setOnClickListener(this);
 
         if (showRate) {
             layoutStar.setVisibility(View.VISIBLE);
@@ -244,6 +247,8 @@ public class RateDialog extends Dialog implements View.OnClickListener {
             if (mListener != null) {
                 mListener.onFeedback(editText.getText().toString().trim());
             }
+            cancel();
+        }else if(i == R.id.cancel){
             cancel();
         }
     }

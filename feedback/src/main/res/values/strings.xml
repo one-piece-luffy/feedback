@@ -2,7 +2,7 @@
     <string name="feedback_rate_title">Do you like our app?</string>
     <string name="feedback_rate_desc">Please kindly give us 5 Stars rating.We will keep up the hard-working</string>
     <string name="feedback_rate">Rate</string>
-    <string name="feedback_fb_des">Your feedback is important to us</string>
+    <string name="feedback_fb_des">Your feedback is important to us. Have a problem or suggestion? please share it with us.</string>
     <string name="feedback_fb_hint">Leave your feedback please</string>
     <string name="feedback_fb_submit">Submit</string>
     <string name="feedback_rate_start_5">Rate On Google Play</string>

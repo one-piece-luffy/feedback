@@ -3,10 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/64679/Documents/GitHub/feedback/app/src/main/res/drawable/rate1.xml" value="0.124" />
+        <entry key="..\:/Users/64679/Documents/GitHub/feedback/app/src/main/res/drawable/rate2.xml" value="0.124" />
+        <entry key="..\:/Users/64679/Documents/GitHub/feedback/app/src/main/res/drawable/rate3.xml" value="0.124" />
+        <entry key="..\:/Users/64679/Documents/GitHub/feedback/app/src/main/res/drawable/rate4.xml" value="0.124" />
+        <entry key="..\:/Users/64679/Documents/GitHub/feedback/app/src/main/res/drawable/rate5.xml" value="0.124" />
         <entry key="..\:/Users/64679/Documents/GitHub/feedback/feedback/src/main/res/drawable/feedback_bg_fb_btn.xml" value="0.124" />
         <entry key="..\:/Users/64679/Documents/GitHub/feedback/feedback/src/main/res/drawable/feedback_bg_fb_edit_text.xml" value="0.124" />
         <entry key="..\:/Users/64679/Documents/GitHub/feedback/feedback/src/main/res/drawable/feedback_shape_rate_btn.xml" value="0.124" />
         <entry key="..\:/Users/64679/Documents/GitHub/feedback/feedback/src/main/res/drawable/feedback_shape_rate_btn_normal.xml" value="0.124" />
+        <entry key="..\:/Users/64679/Documents/GitHub/feedback/feedback/src/main/res/drawable/rate1.xml" value="0.124" />
         <entry key="..\:/Users/64679/Documents/GitHub/feedback/feedback/src/main/res/layout/feedback_dialog_rate.xml" value="0.1" />
       </map>
     </option>

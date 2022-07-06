@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:background="#00000000"
         android:gravity="center_horizontal"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -115,7 +115,7 @@
         android:layout_height="wrap_content"
         android:background="#00000000"
         android:gravity="center_horizontal"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -147,8 +147,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:text="@string/feedback_fb_des"
-                android:textColor="#000"
-                android:textSize="16dp"
+                android:textColor="#333"
+                android:textSize="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/fb_title" />
@@ -161,7 +161,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/feedback_bg_fb_edit_text"
-                android:textSize="17dp"
+                android:textSize="14dp"
                 android:gravity="start"
                 android:hint="@string/feedback_fb_hint"
                 android:padding="12dp"
