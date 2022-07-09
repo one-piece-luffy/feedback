@@ -1,6 +1,6 @@
 <resources>
     <string name="feedback_rate_title">Do you like our app?</string>
-    <string name="feedback_rate_desc">Please kindly give us 5 Stars rating.We will keep up the hard-working</string>
+    <string name="feedback_rate_desc">Please kindly give us 5 Stars if you think it helps</string>
     <string name="feedback_rate">Rate</string>
     <string name="feedback_fb_des">Your feedback is important to us. Have a problem or suggestion? please share it with us.</string>
     <string name="feedback_fb_hint">Leave your feedback please</string>
@@ -9,10 +9,12 @@
     <string name="feedback_fb_success">Thanks for your feedback.</string>
     <string name="feedback_comment_yes">Yes</string>
     <string name="feedback_comment_no">No</string>
-    <string name="feedback_rate_star">We will work hard to make it better</string>
-    <string name="feedback_rate_star_title">Oops!</string>
-    <string name="feedback_rate_star_title_4">Thank you!</string>
+    <string name="feedback_rate_title_star1">Oops!</string>
+    <string name="feedback_rate_title_star4">Thank you!</string>
+    <string name="feedback_rate_desc_start1">We had greatly appreciate if you can feedback</string>
+    <string name="feedback_rate_desc_start2">Your feedback will help us improve our products, Please.</string>
+    <string name="feedback_rate_star3">We will work hard to make it better</string>
+    <string name="feedback_rate_desc_start5">We like you too</string>
     <string name="feedback">Feedback</string>
     <string name="cancel">取消</string>
-    <string name="rate5_desc">We like you too</string>
 </resources>
