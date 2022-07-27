@@ -210,9 +210,13 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                 layoutFeedBack.setVisibility(View.VISIBLE);
             }
         } else if (i == R.id.submit) {
+            String message=editText.getText().toString().trim();
+            if(TextUtils.isEmpty(message)){
+                return;
+            }
             Map<String, String> header = new HashMap<>();
             Map<String, String> params = new HashMap<>();
-            params.put("message", editText.getText().toString().trim());
+            params.put("message",message );
             params.put("app", activity.getApplication().getPackageName());
             params.put("star", score + "");
             params.put("version", FeedbackUtils.getAppVersionName(getContext()));
