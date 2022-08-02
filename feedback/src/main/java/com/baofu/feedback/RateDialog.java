@@ -47,12 +47,16 @@ public class RateDialog extends Dialog implements View.OnClickListener {
     EditText editText;
     TextView submit;
     TextView descFb;
+    TextView fb_title;
     boolean showRate;
     public String feedbackUrl;
     public String feedbackPath;
     public String extraMsg;
 
     private RateDialogListener mListener;
+    int drawable[]=new int[]{
+            R.drawable.rate1,R.drawable.rate2,R.drawable.rate3,R.drawable.rate4,R.drawable.rate5
+    };
 
     public RateDialog(Activity activity, boolean showRate, RateDialogListener listener) {
         super(activity, R.style.FeedbackDialogStyle);
@@ -77,6 +81,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
         title = findViewById(R.id.title);
         icon = findViewById(R.id.icon);
         descFb = findViewById(R.id.descFb);
+        fb_title = findViewById(R.id.fb_title);
 
         layoutStar = findViewById(R.id.layoutStar);
         layoutFeedBack = findViewById(R.id.layoutFeedBack);
@@ -104,7 +109,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                     case 0: {
                         desc.setText(getContext().getString(R.string.feedback_rate_desc));
                         title.setText(getContext().getString(R.string.feedback_rate_title));
-                        icon.setImageResource(R.drawable.rate5);
+                        icon.setImageResource(drawable[4]);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate));
                         mTvRate.setEnabled(false);
                         break;
@@ -113,7 +118,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                         desc.setText(getContext().getString(R.string.feedback_rate_desc_start1));
                         title.setText(getContext().getString(R.string.feedback_rate_title_star1));
 //                        icon.setImageResource(R.drawable.rate_dialog_icon_star_1);
-                        icon.setImageResource(R.drawable.rate1);
+                        icon.setImageResource(drawable[0]);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate));
                         mTvRate.setEnabled(true);
                         break;
@@ -122,7 +127,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                         desc.setText(getContext().getString(R.string.feedback_rate_desc_start2));
                         title.setText(getContext().getString(R.string.feedback_rate_title_star1));
 //                        icon.setImageResource(R.drawable.rate_dialog_icon_star_2);
-                        icon.setImageResource(R.drawable.rate2);
+                        icon.setImageResource(drawable[1]);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate));
                         mTvRate.setEnabled(true);
                         break;
@@ -131,7 +136,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                         desc.setText(getContext().getString(R.string.feedback_rate_star3));
                         title.setText(getContext().getString(R.string.feedback_rate_title_star1));
 //                        icon.setImageResource(R.drawable.rate_dialog_icon_star_3);
-                        icon.setImageResource(R.drawable.rate3);
+                        icon.setImageResource(drawable[2]);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate));
                         mTvRate.setEnabled(true);
                         break;
@@ -140,7 +145,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                         desc.setText(getContext().getString(R.string.feedback_rate_star3));
                         title.setText(getContext().getString(R.string.feedback_rate_title_star4));
 //                        icon.setImageResource(R.drawable.rate_dialog_icon_star_4);
-                        icon.setImageResource(R.drawable.rate4);
+                        icon.setImageResource(drawable[3]);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate));
                         mTvRate.setEnabled(true);
                         break;
@@ -148,7 +153,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                     case 5: {
                         desc.setText(R.string.feedback_rate_desc_start5);
                         title.setText(getContext().getString(R.string.feedback_rate_title_star4));
-                        icon.setImageResource(R.drawable.rate5);
+                        icon.setImageResource(drawable[4]);
                         mTvRate.setText(getContext().getString(R.string.feedback_rate_start_5));
                         mTvRate.setEnabled(true);
                         break;
@@ -286,9 +291,53 @@ public class RateDialog extends Dialog implements View.OnClickListener {
             editText.setHint(hint);
         }
     }
-    public void setFeedbackTitle(String title){
+    public void setFeedbackDesc(String title){
         if(descFb!=null){
             descFb.setText(title);
+        }
+    }
+    public void showFeedbackDesc(boolean show){
+        if(descFb!=null){
+           if(show){
+               descFb.setVisibility(View.VISIBLE);
+           }else {
+               descFb.setVisibility(View.GONE);
+           }
+        }
+    }
+    public void setFeedbackTitle(String title){
+        if(fb_title!=null){
+            fb_title.setText(title);
+        }
+    }
+    public void showFeedbackTitle(boolean show){
+        if(fb_title!=null){
+           if(show){
+               fb_title.setVisibility(View.VISIBLE);
+           }else {
+               fb_title.setVisibility(View.GONE);
+           }
+        }
+    }
+    public void setSubmitText(String title){
+        if(submit!=null){
+            submit.setText(title);
+        }
+    }
+
+    public void setRateDrawable(int[] drawable){
+        if(drawable.length<5){
+            return;
+        }
+        this.drawable=drawable;
+    }
+    public void showRateDesc(boolean show){
+        if(desc!=null){
+            if(show){
+                desc.setVisibility(View.VISIBLE);
+            }else {
+                desc.setVisibility(View.GONE);
+            }
         }
     }
 }
