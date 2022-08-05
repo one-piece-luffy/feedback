@@ -100,7 +100,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
             layoutStar.setVisibility(View.GONE);
             layoutFeedBack.setVisibility(View.VISIBLE);
         }
-
+        icon.setImageResource(drawable[4]);
         ratingBar.setOnRatingChangeListener(new RatingBar.OnRatingChangeListener() {
             @Override
             public void onRatingChange(float ratingCount) {
@@ -330,6 +330,9 @@ public class RateDialog extends Dialog implements View.OnClickListener {
             return;
         }
         this.drawable=drawable;
+        if(icon!=null){
+            icon.setImageResource(drawable[4]);
+        }
     }
     public void showRateDesc(boolean show){
         if(desc!=null){

@@ -54,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        int[] drawable = new int[]{
+                R.drawable.ic_rate1, R.drawable.ic_rate2,
+                R.drawable.ic_rate3, R.drawable.ic_rate4,
+                R.drawable.ic_rate5
+        };
+        rateDialog.setRateDrawable(drawable);
         rateDialog.show();
         rateDialog.feedbackUrl="url";
         rateDialog.feedbackPath="path";
