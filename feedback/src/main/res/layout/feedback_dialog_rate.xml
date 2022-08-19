@@ -166,10 +166,29 @@
                 android:hint="@string/feedback_fb_hint"
                 android:padding="12dp"
                 android:textColor="#000"
-                android:textColorHint="#B3B3B3"
+                android:textColorHint="#636363"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/descFb" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/feedback_bg_fb_edit_text"
+                android:textSize="12dp"
+                android:gravity="start"
+                android:hint="@string/enter_email"
+                android:padding="12dp"
+                android:visibility="gone"
+                android:textColor="#000"
+                android:textColorHint="#636363"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText" />
 
             <TextView
                 android:id="@+id/submit"
@@ -183,7 +202,7 @@
                 android:textColor="#dA0044"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
+                app:layout_constraintTop_toBottomOf="@+id/etEmail" />
             <TextView
                 android:id="@+id/cancel"
                 android:layout_width="wrap_content"
@@ -194,10 +213,11 @@
                 android:paddingEnd="20dp"
                 android:gravity="center"
                 android:text="@string/cancel"
+
                 android:textColor="#AFAFAF"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toStartOf="@+id/submit"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
+                app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

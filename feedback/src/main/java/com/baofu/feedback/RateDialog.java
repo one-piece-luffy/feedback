@@ -45,6 +45,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
     int score = 0;
 
     EditText editText;
+    EditText etEmail;
     TextView submit;
     TextView descFb;
     TextView fb_title;
@@ -76,6 +77,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
         mClose = findViewById(R.id.close);
         mCancel = findViewById(R.id.cancel);
         mTvRate = findViewById(R.id.tv_rate);
+        etEmail = findViewById(R.id.etEmail);
         ratingBar = findViewById(R.id.ratingBar);
         desc = findViewById(R.id.desc);
         title = findViewById(R.id.title);
@@ -342,5 +344,25 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                 desc.setVisibility(View.GONE);
             }
         }
+    }
+
+    public void showEmail(boolean show){
+        if(etEmail!=null){
+            if(show){
+                etEmail.setVisibility(View.VISIBLE);
+            }else {
+                etEmail.setVisibility(View.GONE);
+            }
+        }
+    }
+    public void setEmailHint(String hint){
+        if(etEmail!=null){
+            if(etEmail!=null){
+                etEmail.setHint(hint);
+            }
+        }
+    }
+    public void setExtraMsg(String message){
+        extraMsg=message;
     }
 }

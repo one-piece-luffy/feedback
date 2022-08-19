@@ -17,4 +17,5 @@
     <string name="feedback_rate_desc_start5">We like you too</string>
     <string name="feedback">Feedback</string>
     <string name="cancel">取消</string>
+    <string name="enter_email">Please enter your email address (optional)</string>
 </resources>
