@@ -166,7 +166,7 @@
                 android:hint="@string/feedback_fb_hint"
                 android:padding="12dp"
                 android:textColor="#000"
-                android:textColorHint="#636363"
+                android:textColorHint="#333"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/descFb" />
@@ -185,7 +185,7 @@
                 android:padding="12dp"
                 android:visibility="gone"
                 android:textColor="#000"
-                android:textColorHint="#636363"
+                android:textColorHint="#333"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText" />

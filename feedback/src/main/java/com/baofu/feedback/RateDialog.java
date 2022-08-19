@@ -221,9 +221,10 @@ public class RateDialog extends Dialog implements View.OnClickListener {
             if(TextUtils.isEmpty(message)){
                 return;
             }
+            String email = etEmail.getText().toString().trim();
             Map<String, String> header = new HashMap<>();
             Map<String, String> params = new HashMap<>();
-            params.put("message",message );
+            params.put("message", message + " " + email);
             params.put("app", activity.getApplication().getPackageName());
             params.put("star", score + "");
             params.put("version", FeedbackUtils.getAppVersionName(getContext()));
