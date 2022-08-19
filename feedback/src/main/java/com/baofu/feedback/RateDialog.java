@@ -362,7 +362,4 @@ public class RateDialog extends Dialog implements View.OnClickListener {
             }
         }
     }
-    public void setExtraMsg(String message){
-        extraMsg=message;
-    }
 }
