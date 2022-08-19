@@ -224,13 +224,14 @@ public class RateDialog extends Dialog implements View.OnClickListener {
             String email = etEmail.getText().toString().trim();
             Map<String, String> header = new HashMap<>();
             Map<String, String> params = new HashMap<>();
-            params.put("message", message + " " + email);
+            params.put("message", message );
             params.put("app", activity.getApplication().getPackageName());
             params.put("star", score + "");
             params.put("version", FeedbackUtils.getAppVersionName(getContext()));
             params.put("versioncode", FeedbackUtils.getAppVersionCode(getContext()) + "");
             params.put("device", FeedbackUtils.getDeviceInfo(getContext()));
             params.put("extra_msg", extraMsg);
+            params.put("user", email);
             BPRequest.getInstance()
                     .setMethod(BPRequest.Method.POST)
 //                    .setUrl("http://192.168.0.101:3000/feedback")
