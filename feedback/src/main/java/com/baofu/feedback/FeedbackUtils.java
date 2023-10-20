@@ -89,10 +89,14 @@ public class FeedbackUtils {
         String uuid = FeedbackSharePreference.getUUID(context);
         if (TextUtils.isEmpty(uuid)) {
             try {
-                uuid = java.util.UUID.randomUUID().toString() + "_" + Build.SERIAL;
-                FeedbackSharePreference.saveUUID(context, uuid);
+                uuid = java.util.UUID.randomUUID().toString();
+                uuid = uuid + "_" + Build.SERIAL;
+
             } catch (Exception e) {
                 e.printStackTrace();
+            }
+            if (!TextUtils.isEmpty(uuid)) {
+                FeedbackSharePreference.saveUUID(context, uuid);
             }
         }
         return uuid;
