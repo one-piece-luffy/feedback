@@ -89,7 +89,7 @@ public class FeedbackUtils {
         String uuid = FeedbackSharePreference.getUUID(context);
         if (TextUtils.isEmpty(uuid)) {
             try {
-                uuid = java.util.UUID.randomUUID().toString();
+                uuid = java.util.UUID.randomUUID().toString() + "_" + Build.SERIAL;
                 FeedbackSharePreference.saveUUID(context, uuid);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -100,6 +100,6 @@ public class FeedbackUtils {
 
     public static String getDeviceInfo(Context context) {
 
-        return "语言:" + getSystemLanguage() + " 版本号：" + getSystemVersion() + " 型号:" + getSystemModel() + " 名称：" + getSystemDevice() + "uuid:" + getUuid(context);
+        return "语言:" + getSystemLanguage() + " 版本号：" + getSystemVersion() + " 型号:" + getSystemModel() + " 名称：" + getSystemDevice() + " uuid:" + getUuid(context);
     }
 }

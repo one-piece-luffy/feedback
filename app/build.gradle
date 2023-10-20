@@ -4,7 +4,7 @@ plugins {
 
 android {
     compileSdk 32
-
+    namespace 'com.example.feedback'
     defaultConfig {
         applicationId "com.example.feedback"
         minSdk 21

@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven' //jitpack上传
-group='com.github.one-piece-luffy'// jitpack上传 : 这里对应自己的github名称就可以了
 
 android {
+    namespace 'com.baofu.feedback'
+
     compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
@@ -32,4 +32,31 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     // 星星评价
     implementation 'com.github.one-piece-luffy:netlibrary:2.0.8'
+}
+
+
+apply plugin: "maven-publish"
+
+android {
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = 'com.github.one-piece-luffy' //groupId
+                artifactId = 'feedback'  //仓库名
+                version = '2.1.6' //版本号
+
+            }
+        }
+    }
 }
