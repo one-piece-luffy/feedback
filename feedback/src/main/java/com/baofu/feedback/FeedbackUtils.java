@@ -90,7 +90,7 @@ public class FeedbackUtils {
         if (TextUtils.isEmpty(uuid)) {
             try {
                 uuid = java.util.UUID.randomUUID().toString();
-                uuid = uuid + "_" + Build.SERIAL;
+                uuid = uuid + "/" + getAndroidId(context);
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -100,6 +100,11 @@ public class FeedbackUtils {
             }
         }
         return uuid;
+    }
+    @SuppressLint("HardwareIds")
+    public static String getAndroidId(Context context) {
+        return Settings.Secure.getString(context.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
     }
 
     public static String getDeviceInfo(Context context) {
