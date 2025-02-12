@@ -3,11 +3,13 @@ package com.example.feedback;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
 import com.baofu.feedback.RateDialog;
 import com.baofu.netlibrary.BPConfig;
+import com.baofu.netlibrary.BPListener;
 import com.baofu.netlibrary.BPRequest;
 import com.baofu.netlibrary.listener.RequestListener;
 
@@ -47,6 +49,35 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFeedback(String message,int star,String email) {
+                if(TextUtils.isEmpty(message)){
+                    return;
+                }
+//                Map<String, String> header = new HashMap<>();
+//                Map<String, String> params = new HashMap<>();
+//                params.put("message", message );
+//                params.put("star", star + "");
+//                params.put("user", email);
+//                BPRequest.getInstance()
+//                        .setMethod(BPRequest.Method.POST)
+////                    .setUrl("http://192.168.0.101:3000/feedback")
+//                        .setUrl(AppConfig.BASE_URL)
+//                        .appenEncryptPath("/feedback")
+//                        .setParams(params)
+//                        .setHeader(header)
+//                        .setOnResponseString(new BPListener.OnResponseString() {
+//                            @Override
+//                            public void onResponse(String response) {
+//                                Log.i("RateDialog", response);
+//                            }
+//                        })
+//                        .setOnException(new BPListener.OnException() {
+//                            @Override
+//                            public void onException(Exception e, int code, String response) {
+//                                e.printStackTrace();
+//                            }
+//
+//                        })
+//                        .request();
             }
 
             @Override
