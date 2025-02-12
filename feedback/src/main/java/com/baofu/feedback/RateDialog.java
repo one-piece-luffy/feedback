@@ -222,43 +222,11 @@ public class RateDialog extends Dialog implements View.OnClickListener {
                 return;
             }
             String email = etEmail.getText().toString().trim();
-            Map<String, String> header = new HashMap<>();
-            Map<String, String> params = new HashMap<>();
-            params.put("message", message );
-            params.put("app", activity.getApplication().getPackageName());
-            params.put("star", score + "");
-            params.put("version", FeedbackUtils.getAppVersionName(getContext()));
-            params.put("versioncode", FeedbackUtils.getAppVersionCode(getContext()) + "");
-            params.put("device", FeedbackUtils.getDeviceInfo(getContext()));
-            params.put("extra_msg", extraMsg);
-            params.put("user", email);
-            BPRequest.getInstance()
-                    .setMethod(BPRequest.Method.POST)
-//                    .setUrl("http://192.168.0.101:3000/feedback")
-                    .setUrl(feedbackUrl)
-                    .encryptionUrl(true)
-                    .encryptionDiff(-3)
-                    .appenEncryptPath(feedbackPath)
-                    .setParams(params)
-                    .setHeader(header)
-                    .setOnResponseString(new BPListener.OnResponseString() {
-                        @Override
-                        public void onResponse(String response) {
-                            Log.i("RateDialog", response);
-                        }
-                    })
-                    .setOnException(new BPListener.OnException() {
-                        @Override
-                        public void onException(Exception e, int code, String response) {
-                            e.printStackTrace();
-                        }
 
-                    })
-                    .request();
             Toast.makeText(activity, activity.getString(R.string.feedback_fb_success), Toast.LENGTH_SHORT).show();
             FeedbackSharePreference.savePraise(activity, true);
             if (mListener != null) {
-                mListener.onFeedback(editText.getText().toString().trim());
+                mListener.onFeedback(editText.getText().toString().trim(),score,email);
             }
             cancel();
         }else if(i == R.id.cancel){
@@ -271,7 +239,7 @@ public class RateDialog extends Dialog implements View.OnClickListener {
     public interface RateDialogListener {
         void onRate();
 
-        void onFeedback(String message);
+        void onFeedback(String message,int star,String email);
 
         void onCancel();
     }
