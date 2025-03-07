@@ -109,6 +109,6 @@ public class FeedbackUtils {
 
     public static String getDeviceInfo(Context context) {
 
-        return "语言:" + getSystemLanguage() + " 安卓版本号：" + getSystemVersion() + " 型号:" + getSystemModel() + " 名称：" + getSystemDevice() + " uuid:" + getUuid(context);
+        return "型号:" + getSystemModel() + " 名称：" + getSystemDevice();
     }
 }
