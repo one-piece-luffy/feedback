@@ -72,8 +72,6 @@ public class MainActivity extends AppCompatActivity {
         rateDialog.setRateDrawable(drawable);
         rateDialog.show();
         rateDialog.showEmail(true);
-        rateDialog.feedbackUrl="url";
-        rateDialog.feedbackPath="path";
 //        rateDialog.setFeedbackHint("haha");
 //        rateDialog.setFeedbackTitle("hello");
     }

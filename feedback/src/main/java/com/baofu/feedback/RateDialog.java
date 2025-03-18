@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -20,11 +19,6 @@ import android.widget.Toast;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.baofu.feedback.widget.RatingBar;
-import com.baofu.netlibrary.BPListener;
-import com.baofu.netlibrary.BPRequest;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * 评价&反馈 框
@@ -50,9 +44,6 @@ public class RateDialog extends Dialog implements View.OnClickListener {
     TextView descFb;
     TextView fb_title;
     boolean showRate;
-    public String feedbackUrl;
-    public String feedbackPath;
-    public String extraMsg;
 
     private RateDialogListener mListener;
     int drawable[]=new int[]{

@@ -30,8 +30,6 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
-    // 星星评价
-    implementation 'com.github.one-piece-luffy:netlibrary:2.1.9'
 }
 
 
