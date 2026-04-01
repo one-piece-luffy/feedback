@@ -15,7 +15,7 @@ public class FeedbackUtils {
     /**
      * 获取app versionCode
      */
-    private long getAppVersionCodeLong(Context ctx) {
+    public static long getAppVersionCodeLong(Context ctx) {
         try {
             PackageInfo packageInfo = ctx.getApplicationContext()
                     .getPackageManager()
