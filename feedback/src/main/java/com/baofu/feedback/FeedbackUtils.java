@@ -15,17 +15,21 @@ public class FeedbackUtils {
     /**
      * 获取app versionCode
      */
-    public static int getAppVersionCode(Context ctx) {
-        int localVersion = 0;
+    private long getAppVersionCodeLong(Context ctx) {
         try {
             PackageInfo packageInfo = ctx.getApplicationContext()
                     .getPackageManager()
                     .getPackageInfo(ctx.getPackageName(), 0);
-            localVersion = packageInfo.versionCode;
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                return packageInfo.getLongVersionCode();
+            } else {
+                return packageInfo.versionCode;
+            }
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
+            return 0;
         }
-        return localVersion;
     }
 
     /**
